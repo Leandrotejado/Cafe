@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="panaderia.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Cafetería con Onda</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos para las imágenes ocultas */
+        .menu-item.hidden {
+            display: none;
+        }
+        /* Estilo para el botón */
+        .ver-mas {
+            display: inline-block;
+            background-color: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .ver-mas:hover {
+            background-color: #6b3309;
+        }
+        /* Estilo para cuando el menú está expandido */
+        .menu-expanded .menu-item.hidden {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        } 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mantengo el código inicial igual... -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="panaderia2.png" alt="Logo de la Cafetería">
+                <h1>Panaderia</h1>
+            </div>
+            <ul class="menu">
+                <li><a target="_blank" href="../php/login.php">Iniciar Sesion</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Nuestro Menú</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a target="_blank" href="reservas.php">Reservas</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+        <br>
+            <h1>El Mejor Café y Experiencias Únicas en Tortuguitas</h1>
+            <p>Disfruta de nuestros deliciosos cafés y no te pierdas nuestros eventos de fin de semana.</p>
+            <a href="#menu" class="cta-button">Ver Nuestro Menú</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.adsttc.com/media/images/575f/85e8/e58e/ceef/5c00/0076/large_jpg/TIERRA_GARAT23.jpg?1465877981" alt="Ambiente de la Cafetería">
+        </div>
+    </section>
+    <section id="menu" class="menu-section">
+        <h2>Nuestro Delicioso Menú</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.EIi4fPQUqaQNCq-80lpdZAHaE_?rs=1&pid=ImgDetMain" alt="Café Latte">
+                <h3>Latte Cremoso</h3>
+                <p>Espresso suave con leche vaporizada y un toque de arte latte.</p>
+                <span class="precio">$4.50</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.XE8zpbcG7qJfHGsPU70cZAHaEK?rs=1&pid=ImgDetMain" alt="Capuccino">
+                <h3>Capuccino Italiano</h3>
+                <p>Espresso, leche vaporizada y una corona de espuma perfecta.</p>
+                <span class="precio">$4.80</span>
+            </div>
+            <div class="menu-item hidden">
+                <img src="https://th.bing.com/th/id/OIP.NZGzV2GOHNqBXmBPXiH6YwHaE8?w=251&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Espresso Doble">
+                <h3>Espresso Doble</h3>
+                <p>Una doble dosis de nuestro espresso premium, intenso y aromático.</p>
+                <span class="precio">$3.80</span>
+            </div>
+            <div class="menu-item hidden">
+                <img src="https://cdn.shopify.com/s/files/1/1221/3516/articles/latte-art-on-mocha.jpg?v=1660069726" alt="Mocha">
+                <h3>Mocha Deluxe</h3>
+                <p>Espresso con chocolate, leche vaporizada y crema batida.</p>
+                <span class="precio">$5.20</span>
+            </div>
+            <div class="menu-item hidden">
+                <img src="https://th.bing.com/th/id/OIP._NRJfKZ0twQKDaljLKfvLAHaEt?rs=1&pid=ImgDetMain" alt="Croissant">
+                <h3>Croissant Francés</h3>
+                <p>Croissant recién horneado con mantequilla importada.</p>
+                <span class="precio">$3.50</span>
+            </div>
+            <div class="menu-item hidden">
+                <img src="https://2.bp.blogspot.com/-oFzqsiPVRt0/W54LMVkrXCI/AAAAAAAAOI8/8LqxRVgLMOcPnZQUawIVz0xltVTWHYSagCLcBGAs/s1600/tarta%2Bde%2Bmanzana%2Bfacil%2B%25284%2529.jpg" alt="Tarta">
+                <h3>Tarta de Manzana</h3>
+                <p>Deliciosa tarta de manzana con canela y nuestra masa casera.</p>
+                <span class="precio">$5.80</span>
+            </div>
+        </div>
+        <a href="#" class="ver-mas" id="ver-menu-completo">Ver Menú Completo</a>
+    </section>
+    <!-- El resto del código sigue igual... -->
+    <section id="eventos" class="eventos-section">
+      <center><h2>Eventos de la Semana</h2></center>
+      <div class="eventos-container">
+          <div class="tabla-eventos">
+              <table class="eventos-tabla">
+                  <thead>
+                      <tr>
+                          <th>Día</th>
+                          <th>Fecha</th>
+                          <th>Evento</th>
+                          <th>Horario</th>
+                          <th>Descripción</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Miércoles</td>
+                          <td>23/04</td>
+                          <td>Noche de Jazz</td>
+                          <td>19:00 - 21:00</td>
+                          <td>Disfruta de una velada con el Trío de Jazz "Café Notes"</td>
+                      </tr>
+                      <tr>
+                          <td>Jueves</td>
+                          <td>24/04</td>
+                          <td>Club de Lectura</td>
+                          <td>18:00 - 20:00</td>
+                          <td>Discusión del libro del mes con café y pastelería incluidos</td>
+                      </tr>
+                      <tr>
+                          <td>Viernes</td>
+                          <td>25/04</td>
+                          <td>Recital Acústico</td>
+                          <td>20:00 - 22:30</td>
+                          <td>Presentación en vivo de "Los Materos" con canciones originales</td>
+                      </tr>
+                      <tr>
+                          <td>Sábado</td>
+                          <td>26/04</td>
+                          <td>Festival de Café</td>
+                          <td>10:00 - 18:00</td>
+                          <td>Degustación de cafés especiales de distintas regiones del mundo</td>
+                      </tr>
+                      <tr>
+                          <td>Domingo</td>
+                          <td>27/04</td>
+                          <td>Música en Vivo</td>
+                          <td>17:00 - 19:30</td>
+                          <td>Recital de "Cuerdas al Viento" - Ambiente familiar</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="eventos-info">
+              <h3>¡No te pierdas nuestros eventos!</h3>
+              <p>Reserva tu lugar con anticipación para asegurar tu asistencia. Los eventos tienen cupo limitado.</p>
+              <a href="#" class="cta-button">Reservar para el evento</a>
+          </div>
+      </div>
+  </section>
+    <section id="galeria" class="galeria-section">
+        <h2>Momentos en Nuestro Rincón</h2>
+        <div class="galeria-grid">
+            <img src="https://th.bing.com/th/id/OIP.DjtUFPweIQBwlCplHJ55ogHaEz?w=305&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Imagen de la cafetería">
+            <img src="https://th.bing.com/th/id/OIP.iIznN5wMafiiEzxTwEvKNAHaFj?w=2048&h=1536&rs=1&pid=ImgDetMain" alt="Imagen de un café">
+            <img src="https://parquedelcafe.co/wp-content/uploads/2024/01/Banner-Show-del-Cafe-Personalizado.jpg" alt="Imagen de un evento">
+        </div>
+        <a href="https://www.google.com/maps/place/Nobel+caf%C3%A9+tortuguitas/@-34.4685509,-58.7567438,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgICemdDYugE!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAB5caB-88HldfCtXktLPMmRbLkJn-Xq0XUdBlHpfJsvlRNTA3HWn4MFhcBeY5ahbce4MeqOpnE8nFutuB2zNhnY54F7WrwD8NaEwf78lya360x-XoRFqDvFh_DSYe9df_GYSu83GZCXChA%3Dw224-h298-k-no!7i3072!8i4096!4m13!1m2!2m1!1scafeteria!3m9!1s0x95bc99dacce83c37:0xc8fdabf9f4ec8ce1!8m2!3d-34.4685509!4d-58.7567438!10e5!14m1!1BCgIgAQ!15sCgljYWZldGVyaWFaCyIJY2FmZXRlcmlhkgELY29mZmVlX3Nob3DgAQA!16s%2Fg%2F11s3cl26cp?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" class="ver-mas">Ver Galería Completa</a>
+    </section>
+    <section id="contacto" class="contacto-section">
+        <h2>¡Visítanos o Contáctanos!</h2>
+        <div class="contacto-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Dirección:Tortuguitas, Buenos Aires</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>Teléfono: +54 9 11 1234-1234</p>
+            </div> 
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email: panaderia@gmail.com</p>
+            </div>
+        </div>
+        <form class="contacto-form">
+            <h3>Envíanos un Mensaje</h3>
+            <input type="text" placeholder="Tu Nombre">
+            <input type="email" placeholder="Tu Email">
+            <textarea placeholder="Tu Mensaje"></textarea>
+            <button type="submit" class="cta-button">Enviar Mensaje</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 <b>Panaderia</b> Tu Rincón Cafetero. Todos los derechos reservados.</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="index.js"></script>  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const verMenuBtn = document.getElementById('ver-menu-completo');
+            const menuGrid = document.querySelector('.menu-grid');
+            verMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Alternar la clase para mostrar los elementos ocultos
+                menuGrid.classList.toggle('menu-expanded');
+                // Cambiar el texto del botón según el estado
+                if (menuGrid.classList.contains('menu-expanded')) {
+                    verMenuBtn.textContent = 'Mostrar Menos';
+                } else {
+                    verMenuBtn.textContent = 'Ver Menú Completo';
+                }
+                // Desplazarse suavemente hacia los nuevos elementos
+                if (menuGrid.classList.contains('menu-expanded')) {
+                    const hiddenItems = document.querySelectorAll('.menu-item.hidden');
+                    if (hiddenItems.length > 0) {
+                        setTimeout(() => {
+                            hiddenItems[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 100);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
